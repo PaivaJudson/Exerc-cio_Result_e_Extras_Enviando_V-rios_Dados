@@ -27,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
         edt_telemovel = findViewById(R.id.edt_telemovel);
         edt_email = findViewById(R.id.edt_email);
         edt_genero = findViewById(R.id.edt_genero);
-
+        btn_cadastrar = findViewById(R.id.btn_cadastrar);
 
         btn_cadastrar.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -38,6 +38,8 @@ public class MainActivity extends AppCompatActivity {
                 i.putExtra("telemovel", edt_telemovel.getText().toString());
                 i.putExtra("email",     edt_email.getText().toString());
                 i.putExtra("genero",    edt_genero.getText().toString());
+
+                startActivity(i);
             }
         });
 
